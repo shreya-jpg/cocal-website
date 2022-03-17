@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <style>
+        .card{
+            display: inline-block;
+            margin: 12px;
+
+        }
+        h1{
+            text-align: center;
+            font-size: 110px;
+        }
+    </style>
+
+    <title>CoCAL</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">CoCAL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Others
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="https://youmatter.world/en/definition/definitions-carbon-footprint//"
+                                target="_blank">What is Carbon Footprint?</a></li>
+                            <li><a class="dropdown-item" href="Why calculate.html">Why calculate carbon footprints?</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="reduce.html">How to reduce?</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="https://sustainabletravel.org/issues/carbon-footprint-tourism/" target="_blank">Carbon footprints due to tourism</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            
+                            
+                        </ul>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="mx-2">
+                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">LogIn</button>
+                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
+            </div>
+        </div>
+    </nav>    
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="loginModalLabel">Login to your account</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <form>
+                      <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email address</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1"
+                              aria-describedby="emailHelp">
+                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                      </div>
+                      <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Password</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1">
+                      </div>
+                      <button type="submit" class="btn btn-primary">LogIn</button>
+                  </form>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Sign Up Modal -->
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="signupModalLabel">Get an account</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <form>
+                      <div class="mb-3">
+                          <label for="exampleFormControlInput1">Full Name</label>
+                          <input type="text" class="form-control" id="exampleFormControlInput">
+                      </div>
+                      <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email address</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1"
+                              aria-describedby="emailHelp">
+                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                      </div>
+                      <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Password</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1">
+                      </div>
+                      <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1">
+                      </div>
+                      <button type="submit" class="btn btn-primary">Sign Up</button>
+                  </form>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+  </div>
+    <h1>OUR TEAM</h1><br>
+
+    <div class="container my-4">
+        <div class="card" style="width: 18rem;">
+            <img src="Images/Priyanshi.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">PRIYANSHI SRIVASTAVA</h5>
+              <p class="card-text">CS<br>KIET Group of Institutions<br>priyanshis2001@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <img src="Images/Shreya.jpg" width="260px" height="330px" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">SHREYA SHANKAR</h5>
+              <p class="card-text">CSE<br>KIET Group of Institutions<br>ishreyashankar@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <img src="Images/Siddharth.jpg" height="330px" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">SIDDHARTH SHUKLA</h5>
+              <p class="card-text">CS<br>KIET Group of Institutions<br>siddharthashukla8254@gmail.com</p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="Images/Divyam.jpg" height="330px" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">DIVYAM PAL</h5>
+              <p class="card-text">CSIT<br>KIET Group of Institutions<br>divyampal12013@gmail.com</p>
+            </div>
+            </div>
+            
+            <div class="card" style="width: 18rem;">
+              <img src="Images/Vidushi.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">VIDUSHI BHATNAGAR</h5>
+                <p class="card-text">CS<br>KIET Group of Institutions<br>ihsudivb@gmail.com</p>
+              </div>
+            </div>
+
+          <div class="card" style="width: 18rem;">
+            <img src="Images/Surbhi.jpg" height="276px" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">SURBHI SAWAN</h5>
+              <p class="card-text">CSE<br>KIET Group of Institutions<br>sawansurbhi22@gmail.com</p>
+            </div>
+          </div>
+    </div>
+    <br><br><br><br><br><br><br><br>
+    <footer class="container">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>© 2022–2022 CoCAL, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+      </footer>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

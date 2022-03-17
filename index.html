@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto+Slab:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>CoCAL</title>
+</head>
+
+<body>
+    <script src="index.js"></script>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">CoCAL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Others
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="https://youmatter.world/en/definition/definitions-carbon-footprint//"
+                                target="_blank">What is Carbon Footprint?</a></li>
+                            <li><a class="dropdown-item" href="Why calculate.html">Why calculate carbon footprints?</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="reduce.html">How to reduce?</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="https://sustainabletravel.org/issues/carbon-footprint-tourism/" target="_blank">Carbon footprints due to tourism</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            
+                            
+                        </ul>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="mx-2">
+                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">LogIn</button>
+                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login to your account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <button type="submit" class="btn btn-primary">LogIn</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Get an account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1">Full Name</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="Images/img1.jpg" width=1400px height=500px class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1 style="font-size: 50px; font-family: 'Roboto Slab', serif; font-weight: bold;">
+                        Welcome to CoCAL</h1>
+                        <p style="font-size: 30px; font-family: 'Roboto Slab', serif;">
+                            What is your carbon footprint?<br>
+                            Find out now with this simple calculator</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="Images/img 2.jpg" width=1400px height=500px class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1 style="font-size: 50px; font-family: 'Roboto Slab', serif; font-weight: bold;">
+                        Welcome to CoCAL</h1>
+                        <p style="font-size: 30px; font-family: 'Roboto Slab', serif;">
+                            What is your carbon footprint?<br>
+                            Find out now with this simple calculator</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="Images/img3.jpg" width=1400px height=500px class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1 style="font-size: 50px; font-family: 'Roboto Slab', serif; font-weight: bold;">
+                        Welcome to CoCAL</h1>
+                    <p style="font-size: 30px; font-family: 'Roboto Slab', serif;">
+                    What is your carbon footprint?<br>
+                    Find out now with this simple calculator</p>
+                    
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+				<section ></section>
+			</div>
+            <div id="form">
+                <form>
+                    <h3 id="home-energy-label">Home Energy</h3>
+                    <div class="form-group">
+                        <label for="electric">Monthly electricity bill</label>
+                        <div class="input-group">
+                            <div class="input-group-text">₹</div>
+                            <input class="form-control" id="electric" type="number" min="0" step="0.01">
+                        </div>
+                        <span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
+                    </div><br>
+                    <div class="form-group">
+                        <label for="gas">Monthly natural gas bill</label>
+                        <div class="input-group">
+                            <div class="input-group-text">₹</div>
+                            <input class="form-control" id="gas" type="number" min="0" step="0.01">
+                        </div>
+                        <span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
+                    </div><br>
+                    <div class="form-group">
+                        <label for="oil">Monthly oil bil</label>
+                        <p><i>Some homes use oil as a fuel source for heating furnances or boilers, and is often
+                                abbreviated as HHO.</i></p>
+                        <div class="input-group">
+                            <div class="input-group-text">₹</div>
+                            <input class="form-control" id="oil" type="number" min="0" step="0.01">
+                        </div>
+                        <span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
+                    </div>
+                    <br>
+                    <h3 class="form-section-label" id="travel-label"><i class="fa fa-globe" aria-hidden="true"></i>
+                        Travel</h3>
+                    <div class="form-group">
+                        <label for="car">Annual miles driven on your car</label>
+                        <input class="form-control" id="car" type="number" min="0" step="1">
+                        <span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
+                    </div><br>
+                    <div class="form-group">
+                        <label for="flights-4-less">Number of flights taken in the past year (4 hours or less)</label>
+                        <input class="form-control" id="flights-4-less" type="number" min="0" step="1">
+                        <span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
+                    </div><br>
+                    <div class="form-group">
+                        <label for="flights-4-more">Number of flights taken in the past year (4 hours or more)</label>
+                        <input class="form-control" id="flights-4-more" type="number" min="0" step="1">
+                        <span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
+                    </div>
+                    <br>
+                    <h3 class="form-section-label" id="waste-label"><i class="fa fa-recycle" aria-hidden="true"></i>
+                        Waste</h3>
+                    <div class="form-group">
+                        <label>Do you recycle newspaper?</label>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="newspaperOptionsRadios" id="optionsRadio1" value="option1">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="newspaperOptionsRadios" id="optionsRadio2" value="option2">
+                                No
+                            </label>
+                        </div>
+                    </div><br>
+                    <div class="form-group">
+                        <label>Do you recycle aluminum and tin?</label>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="alumtinOptionsRadios" id="optionsRadio3" value="option3">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="alumtinOptionsRadios" id="optionsRadio4" value="option4">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                    <br>
+                    <button id="calculate-btn" type="button" class="btn btn-success btn-lg btn-block">Calculate</button>
+                </form>
+            </div>
+            <!--
+
+            <div id="results" class="text-center">
+                <h1 id="score"></h1>
+                <br>
+                <p class="lead">This number represents the amount of greenhouse gases in units of carbon dioxide you
+                    emit per year</p>
+                <br>
+                <h5 class="bg-success score-info">438,000 or below is EXCELLENT</h5>
+                <h5 class="bg-info score-info">438,000 to 1,167,927 is GOOD</h5>
+                <h5 class="bg-warning score-info">1,167,927 to 1,606,000 is AVERAGE</h5>
+                <h5 class="bg-danger score-info">1,606,000 or above is BAD</h5>
+                <br>
+                <br>
+                <br>
+                <button id="recalculate-btn" type="button" class="btn btn-success btn-lg btn-block">Recalculate</button>
+
+                <table class="calcgraph" style="margin: auto;">
+                    <tbody>
+                        <tr class="calcgraph">
+                            <td class="calcgraph"><img src="Images/blackfoot2.gif" width="105" height="38"
+                                    alt="Your footprint is 0.32 metric tons per year"></td>
+                            <td class="calcgraph"><img src="Images/blackfoot1.gif" width="105" height="208"
+                                    alt="The average footprint for people in India is 1.73 metric tons"></td>
+                            <td class="calcgraph"><img src="Images/blackfoot.gif" width="105" height="240"
+                                    alt="The worldwide target to combat climate change is 2 metric tons"></td>
+                        </tr>
+                        <tr class="calcgraph">
+                            <th class="calcgraph">Your<br>Footprint</th>
+                            <th class="calcgraph">Country<br>Average</th>
+                            <th class="calcgraph">World<br>Target</th>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="resultspic"></div>
+                <table class="gentable resultsnotes">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <ul class="resultsbullets">
+                                    <li class="resultsbullets">The average footprint for people in India is 1.73 metric
+                                        tons</li>
+                                    <li class="resultsbullets">The average for the European Union is about 6.4 metric
+                                        tons</li>
+                                    <li class="resultsbullets">The average worldwide carbon footprint is about 5 metric
+                                        tons</li>
+                                    <li class="resultsbullets">The worldwide target to combat climate change is 2 metric
+                                        tons</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>-->
+
+
+        <footer class="container">
+            <p class="float-end"><a href="#">Back to top</a></p>
+            <p>© 2022–2022 CoCAL, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+        </footer>
+
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+            crossorigin="anonymous"></script>
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
