@@ -7,22 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto+Slab:wght@500&display=swap"
-        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js"></script>
+    <script src="./signup.js"></script>
     <title>CoCAL</title>
 </head>
 
 <body>
-    <script src="index.js"></script>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="/cocal-website/">CoCAL</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -37,13 +36,11 @@
                         <a class="nav-link" href="/cocal-website/contact.html">Contact Us</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Others
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="https://youmatter.world/en/definition/definitions-carbon-footprint//"
-                                target="_blank">What is Carbon Footprint?</a></li>
+                            <li><a class="dropdown-item" href="https://youmatter.world/en/definition/definitions-carbon-footprint//" target="_blank">What is Carbon Footprint?</a></li>
                             <li><a class="dropdown-item" href="/cocal-website/Why calculate.html">Why calculate carbon footprints?</a></li>
                             <li>
                                 <hr class="dropdown-divider">
@@ -56,11 +53,11 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            
-                            
+
+
                         </ul>
                     </li>
-                    
+
                 </ul>
             </div>
             <div class="mx-2">
@@ -82,15 +79,14 @@
                     <form>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Password</label>
                             <input type="password" class="form-control" id="exampleInputPassword1">
                         </div>
-                        <button type="submit" class="btn btn-primary">LogIn</button>
+                        <button type="submit" class="btn btn-primary" onclick="signIn()">LogIn</button>
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -116,19 +112,18 @@
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
+                            <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp">
                             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <input type="password" class="form-control" id="exampleInputPassword2">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <input type="password" class="form-control" id="exampleInputPassword2">
                         </div>
-                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                        <button type="submit" class="btn btn-primary" onclick="signUp()">Sign Up</button>
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -140,12 +135,9 @@
 
     <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -153,9 +145,8 @@
                 <div class="carousel-caption d-none d-md-block">
                     <h1 style="font-size: 50px; font-family: 'Roboto Slab', serif; font-weight: bold;">
                         Welcome to CoCAL</h1>
-                        <p style="font-size: 30px; font-family: 'Roboto Slab', serif;">
-                            What is your carbon footprint?<br>
-                            Find out now with this simple calculator</p>
+                    <p style="font-size: 30px; font-family: 'Roboto Slab', serif;">
+                        What is your carbon footprint?<br> Find out now with this simple calculator</p>
                 </div>
             </div>
             <div class="carousel-item">
@@ -163,9 +154,8 @@
                 <div class="carousel-caption d-none d-md-block">
                     <h1 style="font-size: 50px; font-family: 'Roboto Slab', serif; font-weight: bold;">
                         Welcome to CoCAL</h1>
-                        <p style="font-size: 30px; font-family: 'Roboto Slab', serif;">
-                            What is your carbon footprint?<br>
-                            Find out now with this simple calculator</p>
+                    <p style="font-size: 30px; font-family: 'Roboto Slab', serif;">
+                        What is your carbon footprint?<br> Find out now with this simple calculator</p>
                 </div>
             </div>
             <div class="carousel-item">
@@ -174,28 +164,25 @@
                     <h1 style="font-size: 50px; font-family: 'Roboto Slab', serif; font-weight: bold;">
                         Welcome to CoCAL</h1>
                     <p style="font-size: 30px; font-family: 'Roboto Slab', serif;">
-                    What is your carbon footprint?<br>
-                    Find out now with this simple calculator</p>
-                    
+                        What is your carbon footprint?<br> Find out now with this simple calculator</p>
+
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
     </div>
     <div class="container-fluid">
-		<div class="row">
-			<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-				<section ></section>
-			</div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <section></section>
+            </div>
             <div id="form">
                 <form>
                     <h3 id="home-energy-label">Home Energy</h3>
@@ -226,8 +213,8 @@
                         <span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
                     </div>
                     <br>
-                    <h3 class="form-section-label" id="travel-label"><i class="fa fa-globe" aria-hidden="true"></i>
-                        Travel</h3>
+                    <h3 class="form-section-label" id="travel-label"><i class="fa fa-globe" aria-hidden="true"></i> Travel
+                    </h3>
                     <div class="form-group">
                         <label for="car">Annual miles driven on your car</label>
                         <input class="form-control" id="car" type="number" min="0" step="1">
@@ -244,8 +231,8 @@
                         <span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
                     </div>
                     <br>
-                    <h3 class="form-section-label" id="waste-label"><i class="fa fa-recycle" aria-hidden="true"></i>
-                        Waste</h3>
+                    <h3 class="form-section-label" id="waste-label"><i class="fa fa-recycle" aria-hidden="true"></i> Waste
+                    </h3>
                     <div class="form-group">
                         <label>Do you recycle newspaper?</label>
                         <div class="radio">
@@ -337,23 +324,25 @@
         </div>-->
 
 
-        <footer class="container">
-            <p class="float-end"><a href="#">Back to top</a></p>
-            <p>© 2022–2022 CoCAL, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
-        </footer>
+            <footer class="container">
+                <p class="float-end"><a href="#">Back to top</a></p>
+                <p>© 2022–2022 CoCAL, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+            </footer>
 
 
-        <!-- Optional JavaScript; choose one of the two! -->
+            <!-- Optional JavaScript; choose one of the two! -->
 
-        <!-- Option 1: Bootstrap Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-            crossorigin="anonymous"></script>
-        <!-- Option 2: Separate Popper and Bootstrap JS -->
-        <!--
+            <!-- Option 1: Bootstrap Bundle with Popper -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+            <!-- Option 2: Separate Popper and Bootstrap JS -->
+            <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
     -->
+
 </body>
+
+
+
 
 </html>

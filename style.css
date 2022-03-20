@@ -1,61 +1,65 @@
 #announcement-panel {
-	padding-top: 80px;
-	padding-bottom: 80px;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
-#announcement-header, #announcement-subheader {
-	color: white;
-	background-color: rgba(38, 77, 0, 0.7);
-	padding: 5px;
+#announcement-header,
+#announcement-subheader {
+    color: white;
+    background-color: rgba(38, 77, 0, 0.7);
+    padding: 5px;
 }
 
 #announcement-header {
-	font-size: 4em;
+    font-size: 4em;
 }
 
 #announcement-subheader {
-	font-size: 2em;
+    font-size: 2em;
 }
 
-.help-block{
+.help-block {
     color: rgb(145, 145, 141);
     font-style: italic;
 }
 
-#form, #results {
-	padding: 40px;
+#form,
+#results {
+    padding: 40px;
     align-items: center;
     width: auto;
 }
 
 #announcement-panel {
-	background-image: url("../images/green-leaves.jpg");
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
+    background-image: url("../images/green-leaves.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #home-energy-label {
-	color: #FF8C00;
+    color: #FF8C00;
 }
 
-#travel-label, .fa-globe {
-	color: #008B8B;
+#travel-label,
+.fa-globe {
+    color: #008B8B;
 }
 
-#waste-label, .fa-recycle {
-	color: #228B22;
+#waste-label,
+.fa-recycle {
+    color: #228B22;
 }
 
 .progress-bar {
-	font-size: 1.2em;
+    font-size: 1.2em;
 }
 
 .score-info {
-	padding: 10px;
-	margin: 0;
-}
-body {
-  background-color: #FFE4E1;
+    padding: 10px;
+    margin: 0;
 }
 
+body {
+    background-color: #FFE4E1;
+}
