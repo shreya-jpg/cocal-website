@@ -13,6 +13,18 @@
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>CoCAL</title>
+	    <style>
+        #travel-label{
+            padding-left: 75px;
+            font-size: 50px;
+            font-weight: bolder;
+            font-style: italic;
+            color: rgb(167, 29, 93);
+        }
+        #form{
+            font-size: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -194,12 +206,22 @@
     <div class="container-fluid">
 		<div class="row">
 			<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-				<section ></section>
+				<section ><br><br><br><br><br><br><br><br>
+                    <h3 class="form-section-label" id="travel-label"><i class="fa fa-globe" aria-hidden="true"></i>
+                        Travel</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        
+                    <h3 class="form-section-label travel" id="travel-label"><i class="fa fa-globe" aria-hidden="true"></i>
+                        Food and Kitchen Needs</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        <h3 class="form-section-label" id="travel-label"><i class="fa fa-globe" aria-hidden="true"></i>
+                            Bathroom and Laundry</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br<br><br><br><br><br><br><br>><br><br>
+                            
+                    <h3 class="form-section-label" id="travel-label"><i class="fa fa-globe" aria-hidden="true"></i>
+                        Disposable Containers and Packaging</h3>
+                </section>
 			</div>
             <div id="form">
                 <form>
-                    <h3 class="form-section-label" id="travel-label"><i class="fa fa-globe" aria-hidden="true"></i>
-                        Travel</h3>
+                    
                     <div class="form-group">
                         <label for="car">Annual miles driven on your car</label>
                         <input class="form-control" id="car" type="number" min="0" step="1">
@@ -215,9 +237,7 @@
                         <input class="form-control" id="flights-4-more" type="number" min="0" step="1">
                         <span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
                     </div><br>
-
-                    <h3 class="form-section-label" id="travel-label"><i class="fa fa-globe" aria-hidden="true"></i>
-                        Food and Kitchen Needs</h3>
+                    <br><br>
                     <div class="col-7">
                         <label for="inlineFormInputGroupUsername">Plastic Bags</label>
                         <div class="input-group">
@@ -291,10 +311,8 @@
                         </select>
                       </div>
                     
-                    <br>
+                    <br><br><br>
 
-                    <h3 class="form-section-label" id="travel-label"><i class="fa fa-globe" aria-hidden="true"></i>
-                        Bathroom and Laundry</h3>
                     <div class="col-7">
                         <label for="inlineFormInputGroupUsername">Cotton Swabs</label>
                         <div class="input-group">
@@ -404,10 +422,8 @@
                         </select>
                       </div>
                     
-                    <br>
+                    <br><br><br>
 
-                    <h3 class="form-section-label" id="travel-label"><i class="fa fa-globe" aria-hidden="true"></i>
-                        Disposable Containers and Packaging</h3>
                     <div class="col-7">
                         <label for="inlineFormInputGroupUsername">Take-away plastic boxes</label>
                         <div class="input-group">
@@ -522,7 +538,6 @@
                 </form>
             </div>
             <!--
-
             <div id="results" class="text-center">
                 <h1 id="score"></h1>
                 <br>
@@ -537,7 +552,6 @@
                 <br>
                 <br>
                 <button id="recalculate-btn" type="button" class="btn btn-success btn-lg btn-block">Recalculate</button>
-
                 <table class="calcgraph" style="margin: auto;">
                     <tbody>
                         <tr class="calcgraph">
