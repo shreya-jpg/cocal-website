@@ -10,11 +10,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js"></script>
-    <script src="./signup.js"></script>
     <title>CoCAL</title>
+    <style>
+        #travel-label {
+            padding-left: 75px;
+            font-size: 50px;
+            font-weight: bolder;
+            font-style: italic;
+            color: rgb(167, 29, 93);
+            text-decoration: underline;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        #form {
+            font-size: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -179,7 +190,7 @@
         </button>
     </div>
     <div class="container-fluid">
-        <div class="row">
+        <<<<<<< HEAD <div class="row">
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                 <section></section>
             </div>
@@ -215,60 +226,340 @@
                     <br>
                     <h3 class="form-section-label" id="travel-label"><i class="fa fa-globe" aria-hidden="true"></i> Travel
                     </h3>
-                    <div class="form-group">
-                        <label for="car">Annual miles driven on your car</label>
-                        <input class="form-control" id="car" type="number" min="0" step="1">
-                        <span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
-                    </div><br>
-                    <div class="form-group">
-                        <label for="flights-4-less">Number of flights taken in the past year (4 hours or less)</label>
-                        <input class="form-control" id="flights-4-less" type="number" min="0" step="1">
-                        <span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
-                    </div><br>
-                    <div class="form-group">
-                        <label for="flights-4-more">Number of flights taken in the past year (4 hours or more)</label>
-                        <input class="form-control" id="flights-4-more" type="number" min="0" step="1">
-                        <span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
-                    </div>
-                    <br>
-                    <h3 class="form-section-label" id="waste-label"><i class="fa fa-recycle" aria-hidden="true"></i> Waste
-                    </h3>
-                    <div class="form-group">
-                        <label>Do you recycle newspaper?</label>
-                        <div class="radio">
-                            <label>
-                                <input type="radio" name="newspaperOptionsRadios" id="optionsRadio1" value="option1">
-                                Yes
-                            </label>
+                    =======
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                            <section><br><br><br><br><br><br><br><br>
+                                <h3 class="form-section-label" id="travel-label"><i class="fa fa-globe" aria-hidden="true"></i> Travel
+                                </h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+                                <h3 class="form-section-label travel" id="travel-label"><i class="fa fa-globe" aria-hidden="true"></i> Food and Kitchen Needs</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <h3 class="form-section-label" id="travel-label"><i class="fa fa-globe" aria-hidden="true"></i> Bathroom and Laundry</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <br<br><br><br><br><br><br><br>><br><br>
+
+                                    <h3 class="form-section-label" id="travel-label"><i class="fa fa-globe" aria-hidden="true"></i> Disposable Containers and Packaging</h3>
+                            </section>
                         </div>
-                        <div class="radio">
-                            <label>
-                                <input type="radio" name="newspaperOptionsRadios" id="optionsRadio2" value="option2">
-                                No
-                            </label>
-                        </div>
-                    </div><br>
-                    <div class="form-group">
-                        <label>Do you recycle aluminum and tin?</label>
-                        <div class="radio">
-                            <label>
+                        <div id="form">
+                            <form>
+
+                                >>>>>>> 0116242938eda9129da98ebd5d214dfb384d80af
+                                <div class="form-group">
+                                    <label for="car">Annual miles driven on your car</label>
+                                    <input class="form-control" id="car" type="number" min="0" step="1">
+                                    <span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
+                                </div><br>
+                                <div class="form-group">
+                                    <label for="flights-4-less">Number of flights taken in the past year (4 hours or less)</label>
+                                    <input class="form-control" id="flights-4-less" type="number" min="0" step="1">
+                                    <span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
+                                </div><br>
+                                <div class="form-group">
+                                    <label for="flights-4-more">Number of flights taken in the past year (4 hours or more)</label>
+                                    <input class="form-control" id="flights-4-more" type="number" min="0" step="1">
+                                    <span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
+                                </div><br>
+                                <br><br>
+                                <div class="col-7">
+                                    <label for="inlineFormInputGroupUsername">Plastic Bags</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="inlineFormInputGroupUsername" placeholder="0">
+                                    </div>
+                                </div>
+
+                                <div class="col-7">
+                                    <select class="form-select" id="inlineFormInputGroupUsername">
+                            <option selected>Select</option>
+                            <option value="1">per day</option>
+                            <option value="2">per week</option>
+                            <option value="3">per month</option>
+                            <option value="4">per three months</option>
+                            <option value="5">per half year</option>
+                            <option value="6">per year</option>
+                        </select>
+                                </div><br>
+                                <div class="col-7">
+                                    <label for="inlineFormInputGroupUsername">PET Bottles</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="inlineFormInputGroupUsername" placeholder="0">
+                                    </div>
+                                </div>
+
+                                <div class="col-7">
+                                    <select class="form-select" id="inlineFormInputGroupUsername">
+                            <option selected>Select</option>
+                            <option value="1">per day</option>
+                            <option value="2">per week</option>
+                            <option value="3">per month</option>
+                            <option value="4">per three months</option>
+                            <option value="5">per half year</option>
+                            <option value="6">per year</option>
+                        </select>
+                                </div><br>
+                                <div class="col-7">
+                                    <label for="inlineFormInputGroupUsername">Food Wrappers</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="inlineFormInputGroupUsername" placeholder="0">
+                                    </div>
+                                </div>
+
+                                <div class="col-7">
+                                    <select class="form-select" id="inlineFormInputGroupUsername">
+                            <option selected>Select</option>
+                            <option value="1">per day</option>
+                            <option value="2">per week</option>
+                            <option value="3">per month</option>
+                            <option value="4">per three months</option>
+                            <option value="5">per half year</option>
+                            <option value="6">per year</option>
+                        </select>
+                                </div><br>
+                                <div class="col-7">
+                                    <label for="inlineFormInputGroupUsername">Yogurt Containers</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="inlineFormInputGroupUsername" placeholder="0">
+                                    </div>
+                                </div>
+
+                                <div class="col-7">
+                                    <select class="form-select" id="inlineFormInputGroupUsername">
+                            <option selected>Select</option>
+                            <option value="1">per day</option>
+                            <option value="2">per week</option>
+                            <option value="3">per month</option>
+                            <option value="4">per three months</option>
+                            <option value="5">per half year</option>
+                            <option value="6">per year</option>
+                        </select>
+                                </div>
+
+                                <br><br><br>
+
+                                <div class="col-7">
+                                    <label for="inlineFormInputGroupUsername">Cotton Swabs</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="inlineFormInputGroupUsername" placeholder="0">
+                                    </div>
+                                </div>
+
+                                <div class="col-7">
+                                    <select class="form-select" id="inlineFormInputGroupUsername">
+                            <option selected>Select</option>
+                            <option value="1">per day</option>
+                            <option value="2">per week</option>
+                            <option value="3">per month</option>
+                            <option value="4">per three months</option>
+                            <option value="5">per half year</option>
+                            <option value="6">per year</option>
+                        </select>
+                                </div><br>
+                                <div class="col-7">
+                                    <label for="inlineFormInputGroupUsername">Detergent, Cleaning Product Bottles</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="inlineFormInputGroupUsername" placeholder="0">
+                                    </div>
+                                </div>
+
+                                <div class="col-7">
+                                    <select class="form-select" id="inlineFormInputGroupUsername">
+                            <option selected>Select</option>
+                            <option value="1">per day</option>
+                            <option value="2">per week</option>
+                            <option value="3">per month</option>
+                            <option value="4">per three months</option>
+                            <option value="5">per half year</option>
+                            <option value="6">per year</option>
+                        </select>
+                                </div><br>
+                                <div class="col-7">
+                                    <label for="inlineFormInputGroupUsername">Shampoo/Shower gel/Cosmetics Bottles</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="inlineFormInputGroupUsername" placeholder="0">
+                                    </div>
+                                </div>
+
+                                <div class="col-7">
+                                    <select class="form-select" id="inlineFormInputGroupUsername">
+                            <option selected>Select</option>
+                            <option value="1">per day</option>
+                            <option value="2">per week</option>
+                            <option value="3">per month</option>
+                            <option value="4">per three months</option>
+                            <option value="5">per half year</option>
+                            <option value="6">per year</option>
+                        </select>
+                                </div><br>
+                                <div class="col-7">
+                                    <label for="inlineFormInputGroupUsername">Refill Packets</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="inlineFormInputGroupUsername" placeholder="0">
+                                    </div>
+                                </div>
+
+                                <div class="col-7">
+                                    <select class="form-select" id="inlineFormInputGroupUsername">
+                            <option selected>Select</option>
+                            <option value="1">per day</option>
+                            <option value="2">per week</option>
+                            <option value="3">per month</option>
+                            <option value="4">per three months</option>
+                            <option value="5">per half year</option>
+                            <option value="6">per year</option>
+                        </select>
+                                </div><br>
+                                <div class="col-7">
+                                    <label for="inlineFormInputGroupUsername">Toothbrushes</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="inlineFormInputGroupUsername" placeholder="0">
+                                    </div>
+                                </div>
+
+                                <div class="col-7">
+                                    <select class="form-select" id="inlineFormInputGroupUsername">
+                            <option selected>Select</option>
+                            <option value="1">per day</option>
+                            <option value="2">per week</option>
+                            <option value="3">per month</option>
+                            <option value="4">per three months</option>
+                            <option value="5">per half year</option>
+                            <option value="6">per year</option>
+                        </select>
+                                </div><br>
+                                <div class="col-7">
+                                    <label for="inlineFormInputGroupUsername">Toothpastes</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="inlineFormInputGroupUsername" placeholder="0">
+                                    </div>
+                                </div>
+
+                                <div class="col-7">
+                                    <select class="form-select" id="inlineFormInputGroupUsername">
+                            <option selected>Select</option>
+                            <option value="1">per day</option>
+                            <option value="2">per week</option>
+                            <option value="3">per month</option>
+                            <option value="4">per three months</option>
+                            <option value="5">per half year</option>
+                            <option value="6">per year</option>
+                        </select>
+                                </div>
+
+                                <br><br><br>
+
+                                <div class="col-7">
+                                    <label for="inlineFormInputGroupUsername">Take-away plastic boxes</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="inlineFormInputGroupUsername" placeholder="0">
+                                    </div>
+                                </div>
+
+                                <div class="col-7">
+                                    <select class="form-select" id="inlineFormInputGroupUsername">
+                            <option selected>Select</option>
+                            <option value="1">per day</option>
+                            <option value="2">per week</option>
+                            <option value="3">per month</option>
+                            <option value="4">per three months</option>
+                            <option value="5">per half year</option>
+                            <option value="6">per year</option>
+                        </select>
+                                </div><br>
+                                <div class="col-7">
+                                    <label for="inlineFormInputGroupUsername">Take-away plastic cups</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="inlineFormInputGroupUsername" placeholder="0">
+                                    </div>
+                                </div>
+
+                                <div class="col-7">
+                                    <select class="form-select" id="inlineFormInputGroupUsername">
+                            <option selected>Select</option>
+                            <option value="1">per day</option>
+                            <option value="2">per week</option>
+                            <option value="3">per month</option>
+                            <option value="4">per three months</option>
+                            <option value="5">per half year</option>
+                            <option value="6">per year</option>
+                        </select>
+                                </div><br>
+                                <div class="col-7">
+                                    <label for="inlineFormInputGroupUsername">Straws</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="inlineFormInputGroupUsername" placeholder="0">
+                                    </div>
+                                </div>
+
+                                <div class="col-7">
+                                    <select class="form-select" id="inlineFormInputGroupUsername">
+                            <option selected>Select</option>
+                            <option value="1">per day</option>
+                            <option value="2">per week</option>
+                            <option value="3">per month</option>
+                            <option value="4">per three months</option>
+                            <option value="5">per half year</option>
+                            <option value="6">per year</option>
+                        </select>
+                                </div><br>
+                                <div class="col-7">
+                                    <label for="inlineFormInputGroupUsername">Disposable Cutlery</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="inlineFormInputGroupUsername" placeholder="0">
+                                    </div>
+                                </div>
+
+                                <div class="col-7">
+                                    <select class="form-select" id="inlineFormInputGroupUsername">
+                            <option selected>Select</option>
+                            <option value="1">per day</option>
+                            <option value="2">per week</option>
+                            <option value="3">per month</option>
+                            <option value="4">per three months</option>
+                            <option value="5">per half year</option>
+                            <option value="6">per year</option>
+                        </select>
+                                </div><br>
+                                <div class="col-7">
+                                    <label for="inlineFormInputGroupUsername">Plastic plates</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="inlineFormInputGroupUsername" placeholder="0">
+                                    </div>
+                                </div>
+
+                                <div class="col-7">
+                                    <select class="form-select" id="inlineFormInputGroupUsername">
+                            <option selected>Select</option>
+                            <option value="1">per day</option>
+                            <option value="2">per week</option>
+                            <option value="3">per month</option>
+                            <option value="4">per three months</option>
+                            <option value="5">per half year</option>
+                            <option value="6">per year</option>
+                        </select>
+                                </div>
+
+                                <br>
+                                <h3 class="form-section-label" id="waste-label"><i class="fa fa-recycle" aria-hidden="true"></i> Waste
+                                </h3>
+                                <div class="form-group">
+                                    <label>Do you recycle aluminum and tin?</label>
+                                    <div class="radio">
+                                        <label>
                                 <input type="radio" name="alumtinOptionsRadios" id="optionsRadio3" value="option3">
                                 Yes
                             </label>
-                        </div>
-                        <div class="radio">
-                            <label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
                                 <input type="radio" name="alumtinOptionsRadios" id="optionsRadio4" value="option4">
                                 No
                             </label>
+                                    </div>
+                                </div>
+                                <br>
+                                <button id="calculate-btn" type="button" class="btn btn-success btn-lg btn-block">Calculate</button>
+                            </form>
                         </div>
-                    </div>
-                    <br>
-                    <button id="calculate-btn" type="button" class="btn btn-success btn-lg btn-block">Calculate</button>
-                </form>
-            </div>
-            <!--
-
+                        <!--
             <div id="results" class="text-center">
                 <h1 id="score"></h1>
                 <br>
@@ -283,7 +574,6 @@
                 <br>
                 <br>
                 <button id="recalculate-btn" type="button" class="btn btn-success btn-lg btn-block">Recalculate</button>
-
                 <table class="calcgraph" style="margin: auto;">
                     <tbody>
                         <tr class="calcgraph">
@@ -324,18 +614,18 @@
         </div>-->
 
 
-            <footer class="container">
-                <p class="float-end"><a href="#">Back to top</a></p>
-                <p>© 2022–2022 CoCAL, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
-            </footer>
+                        <footer class="container">
+                            <p class="float-end"><a href="#">Back to top</a></p>
+                            <p>© 2022–2022 CoCAL, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+                        </footer>
 
 
-            <!-- Optional JavaScript; choose one of the two! -->
+                        <!-- Optional JavaScript; choose one of the two! -->
 
-            <!-- Option 1: Bootstrap Bundle with Popper -->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-            <!-- Option 2: Separate Popper and Bootstrap JS -->
-            <!--
+                        <!-- Option 1: Bootstrap Bundle with Popper -->
+                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+                        <!-- Option 2: Separate Popper and Bootstrap JS -->
+                        <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
     -->
